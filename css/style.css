@@ -1,0 +1,1599 @@
+@font-face {
+	font-family: 'Stem-Bold';
+	src: url('./StemBold.ttf');		
+}
+
+@font-face {
+	font-family: 'Stem-Medium';
+	src: url('./StemMedium.ttf');		
+}
+
+@font-face {
+	font-family: 'Stem-Regular';
+	src: url('./StemRegular.ttf');		
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Stem-Medium', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    width: 1110px;
+    max-width: 90%;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    gap: inherit;
+}
+
+h1 {
+    font-family: 'Stem-Bold';
+    font-weight: 700;
+}
+
+h2, h3, h4, h5 {
+    font-family: 'Stem-Medium';
+    font-weight: 500;
+}
+
+h6 {
+    font-family: 'Stem-Regular';
+    font-weight: 400px;
+}
+
+header {
+    position: fixed;
+    height: 98px;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1000;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+header .logo {
+    width: 150px;
+    height: 32px;
+    background-image: url('../image/Михельсон.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1001;
+}   
+
+header .wrapper {
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: inherit;
+    gap: inherit;
+    align-items: inherit;
+}
+
+header nav ul {
+    display: flex;
+    gap: 24px;
+    margin-right: 40px;
+    align-items: center;
+    list-style: none;
+    z-index: 99;
+    align-items: center;
+}
+
+.phone-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    margin-left: 40px; 
+}
+
+.phone-number {
+    width: 144px;
+    height: 16px; 
+    line-height: 1; 
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.call-now {
+    width: 155px;
+    height: 24px;
+    line-height: 1; 
+    color: rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+}
+header nav a {
+    width: 111px;
+    height: 24px;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+header nav a::after {
+    content: '';
+    display: block;
+
+    width: 0%;
+    height: 37px;
+    background-color: white;
+
+    transition: .3s;
+
+    margin-left: 50%;
+}
+
+header nav li:hover a::after {
+    width: 100%;
+
+    margin-left: 0%;
+}
+
+header .primary {
+    color: white;
+    background-color: #FF5545;
+
+    width: 168px;
+    height: 44px;
+    padding: 0;
+
+    border-radius: 6px;
+    border: none;
+    gap: 10;
+
+    cursor: pointer;
+    font-size: 15px;
+
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3;
+}
+
+header .primary:hover {
+    background-color: white; 
+    color: #FF5545;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.burger {
+    width: 26px;
+    height: 20px;
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+}
+
+.burger span {
+    width: 100%;
+    height: 3px;
+    background: black;
+    transition: .3s;
+}
+
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+
+.menu-open nav ul li a {
+    text-decoration: none;
+}
+
+.menu-open nav ul li a:hover {
+    color: #e63737 !important; 
+}
+
+/*Михельсон Сергей*/
+
+main {
+    position: relative;
+    margin-top: 131px;
+    width: 100%;
+    align-items: center;
+    margin-top: 98px;
+    padding-top: 224px;
+}
+
+main .banner {
+    z-index: 2;
+    align-items: flex-start;  
+}
+
+main .banner h1 {
+    width: 100%;
+    font-size: 64px;
+    font-weight: 700;
+    color: white;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+main .banner h2 {
+    width: 100%;
+    min-height: 93px;
+    font-size: 24px;
+    color: white;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+main .buttons {
+    display: flex;
+    gap: 16px;
+}    
+
+main {
+    width: 100%;
+    min-height: 798px;
+    background-image: url('../image/man.jpg');
+    background-size: cover;
+}
+
+.button-container {
+    display: flex;
+    gap: 16px; 
+    justify-content: flex-start; 
+}
+
+.banner h2 {
+    color: white;
+    opacity: 0.8;
+    font-family: 'Stem-Medium';
+    font-weight: 400;
+}
+
+.primary {
+    font-size: 18px; 
+    line-height: 24px; 
+    padding: 16px 32px; 
+    border-radius: 6px; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color .3s, color .3s, transform .3s, box-shadow .3s;
+}
+
+.primary:hover {
+    background-color: #e04e3d;
+}
+.primary-1 {
+    background-color: #FF5545;
+    color: white; 
+}
+
+.primary-1:hover {
+    background-color: white; 
+    color: #FF5545;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.primary-2 {
+    background-color: white;
+    color: #FF5545;
+}
+
+.primary-2:hover {
+    background-color: #FF5545;
+    color: white;
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+
+/*Юридические услуги*/
+
+section {
+    padding: 120px 0;
+}
+
+section .container {
+    padding-bottom: 0;
+}
+
+.main-text {
+    text-align: center; 
+    position: relative;
+    color: black;
+}
+
+.main-text .first-text {
+    color: #FF5545;
+    font-size: 28px;
+    font-family: 'Stem-Medium', sans-serif;
+}
+
+.main-text .first-text h2 {
+    font-family: 'Stem-Medium'!important;
+}
+
+.main-text .second-text p {
+    font-size: 24px;
+}
+
+.item h2 {
+    font-family: 'Stem-Medium' ;
+}
+
+.item p {
+    font-family: 'Stem-Regular', sans-serif;
+    color: white;
+    opacity: 80%;
+}
+
+.main-text .second-text {
+    color: black;
+    opacity: 70%;
+}
+
+.main-text h2 {
+    font-size: 28px; 
+    margin-bottom: 32px; 
+}
+
+.main-text h1 {
+    font-size: 64px;
+    margin-bottom: 32px; 
+}
+
+.main-text h2:last-of-type {
+    margin-bottom: 32px; 
+}
+
+
+.main-gallery {
+    display: flex;
+    justify-content: space-around; 
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.item {
+    position: relative;
+    flex: 1; 
+    max-width: 350px;
+    text-align: center; 
+    margin-top: 64px;
+}
+
+.item img {
+    width: 350px; 
+    height: 380px;
+    object-fit: cover; 
+}
+
+.item .text {
+    text-align: center; 
+    position: absolute;
+    bottom: 32px; 
+    color: white;
+    left: 32px; 
+    right: 32px; 
+}
+
+.item h2 {
+    margin-bottom: 10px;
+    font-family: 'Stem-Medium', sans-serif;
+}
+
+.item p {
+    font-family: 'Stem-Regular';
+    font-weight: 400px;
+}
+
+/*12 лет частной практики*/
+
+#practica {
+    width: 100%;
+
+}
+
+#practica .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-wrap: wrap;
+    gap: 125px;
+}
+
+#practica .text h1 {
+    font-size: 64px;
+    font-weight: 445px;
+    color: black;
+    flex: 0 0 auto; 
+    text-align: left;
+    line-height: 68px;
+}
+
+#practica .text p {
+    font-size: 18px;
+    color: black;
+    flex: 1; 
+    text-align: left;
+    max-width: 540px;
+    color: black;
+    opacity: 70%;
+    font-family: 'Stem-Regular', sans-serif;
+    font-weight: 400px;
+}
+
+/*Диплом и сертификат*/
+
+
+#diplomi .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    min-height: 810px;
+    width: 100%;
+}    
+
+#diplomi .gallery img {
+    width: 100%;
+    object-fit: cover; 
+}
+
+#diplomi .gallery img:first-child {
+    grid-row: span 2; 
+}
+
+/*Свяжитесь со мной*/
+
+#connect {
+    width: 100%;
+    background-image: url('../image/computer.jpg');
+    background-size: cover;
+}
+
+#connect .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#connect .text {
+    text-align: center; 
+    color: white;
+    margin-bottom: 40px;
+}
+
+#connect .text h1 {
+    font-size: 48px; 
+    margin-bottom: 16px; 
+}
+
+#connect .text p {
+    font-size: 18px; 
+    margin-bottom: 40px; 
+    color: white;
+    opacity: 80%;
+}
+
+#connect .text-box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#connect .text-box1 {
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    justify-content: center;
+}
+
+.input-field::placeholder {
+    color: black;
+    opacity: 20%;
+}
+
+#connect .input-field {
+    width: 260px;
+    height: 56px;
+    font-size: 18px; 
+    font-family: 'Stem-Regular';
+    font-weight: 400px;
+    border-radius: 6px; 
+    border: none;
+    cursor: pointer;
+    outline: none; 
+    transition: border-color .3s; 
+    padding-left: 20px;
+}
+
+#connect .primary-1 {
+    width: 260px;
+    height: 56px;
+    font-size: 18px; 
+    text-align: center;
+    padding: 16px 0;
+    border-radius: 6px; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color .3s, color .3s, transform .3s, box-shadow .3s;
+}
+
+.primary-1:hover {
+    background-color: white; 
+    color: #FF5545;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/*Как я работаю*/
+
+#work {
+    width: 100%;
+    background-color: white;
+    margin-top: 120px;
+}
+
+#work .container{
+    justify-content: center;
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+}
+
+#work .text {
+    text-align: center;
+    justify-content: center; 
+    color: black;
+    margin-bottom: 58px;
+}
+
+#work .work-step {
+    display: flex; 
+    align-items: center; 
+    min-height: 224px; 
+    margin-bottom: 0px;
+    width: 52.9%;
+    gap: 0;
+    justify-content: space-between;
+    align-items: start;
+}
+#work .work-step .circle {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #FF5545;
+    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.2);
+    background: #fff;
+    border-radius: 64px;
+}
+
+.work-step .text-1 {
+    margin-right: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+#work .text-2 {
+    margin-right: 32px;
+}
+
+#work .text-3 {
+    margin-right: 32px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+#work h1 {
+    font-size: 64px; 
+    margin-bottom: 24px;  
+}
+
+#work .text h2 {
+    font-size: 24px; 
+    margin-bottom: 16px;  
+   
+}
+
+#work h2 {
+    font-size: 24px; 
+    margin-bottom: 16px;  
+}
+
+#work p {
+    font-size: 18px; 
+    margin: 0; 
+    color: black;
+    opacity: 70%;
+}
+
+
+#work .work-step h2 {
+    font-family: 'Stem-Bold';
+    font-weight: 700px;
+}
+
+#work .work-step:nth-child(3) {
+    align-self: self-end; 
+}
+
+
+#work .gallery {
+    display: flex; 
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Бесплатная консультация*/
+
+#free_konsult {
+    width: 100%;
+    height: 798px;
+    background-image: url('../image/free_k.jpg');
+    background-size: cover;
+    padding: 210px 0;
+}
+
+#free_konsult .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#free_konsult .text {
+    text-align: center;
+    color: white;
+}
+
+#free_konsult .text h1 {
+    font-size: 64px;
+    margin-bottom: 24px;
+}
+
+#free_konsult .text p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: white;
+    opacity: 80%;
+}
+
+#free_konsult .work-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#free_konsult .numbers {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+#free_konsult .numbers h4 {
+    font-size: 18px;
+    color: white;
+    opacity: 70%;
+}
+
+#free_konsult .numbers-1 {
+    text-align: center;
+}
+
+#free_konsult .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+#free_konsult .buttons .text {
+    color: black;
+    opacity: 20%;
+}
+
+#free_konsult .input-field {
+    width: 260px; 
+    height: 56px; 
+    font-size: 18px; 
+    font-family: 'Stem-Regular';
+    font-weight: 400px;
+    border-radius: 6px; 
+    border: none;
+    padding-left: 10px; 
+    margin-bottom: 16px; 
+}
+
+#free_konsult .primary {
+    width: 260px; 
+    height: 56px; 
+    font-size: 18px; 
+    text-align: center; 
+    padding: 16px 0; 
+    border-radius: 6px;
+    background-color: #FF5545; 
+    color: white; 
+    cursor: pointer; 
+    transition: background-color .3s; 
+}
+
+#free_konsult .primary:hover {
+    background-color: white; 
+    color: #FF5545;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/*Мои клиенты*/
+
+#klients {
+    width: 100%;
+    padding: 80px 0;
+    background-color: white;
+}
+
+#klients .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 128px;
+}
+
+#klients .text {
+    text-align: center;
+    color: black;
+    margin-bottom: 64px;
+}
+
+#klients .text h1 {
+    font-size: 64px;
+    margin-bottom: 24px;
+}
+
+#klients .text p {
+    font-size: 24px;
+    color: black;
+    opacity: 0.7;
+}
+
+#klients .swiper-clients-swiper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 64px; 
+}
+
+#klients .swiper-wrapper {
+    display: flex;
+    transition-timing-function: linear;
+}
+
+#klients .swiper-slide {
+    width: 25%; 
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+#klients .swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+#klients .swiper-slide:hover img {
+    transform: scale(1.05);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 64px;
+    height: 64px;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.swiper-button-prev {
+    left: 64px; 
+}
+
+.swiper-button-next {
+    right: 64px; 
+}
+
+.swiper-pagination {
+    width: 100%; /* Убедитесь, что это значение вам нужно */
+    position: absolute;
+    bottom: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding-top: 32px;
+}
+
+.swiper-pagination-bullet {
+    width: 24px; 
+    height: 4px; 
+    background: rgba(0, 0, 0, 0.2); 
+    border-radius: 2px; /* Исправлено на 2px */
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #FF5545; 
+    width: 24px; 
+    height: 4px; 
+}
+
+
+.swiper-button-prev::after{
+    display: none;
+}
+
+.swiper-button-next::after{
+    display: none !important;
+} 
+
+@media (min-width: 1034px) {
+    #klients .swiper-slide {
+        width: 25%; 
+    }
+}
+
+@media (min-width: 809px) and (max-width: 1033px) {
+    #klients .swiper-slide {
+        width: 33.3%; 
+    }
+}
+
+@media (min-width: 731px) and (max-width: 808px) {
+    #klients .swiper-slide {
+        width: 50%; 
+    }
+}
+
+@media (max-width: 730px) {
+    #klients .swiper-slide {
+        width: 100%; 
+    }
+}
+
+
+/*Отзывы*/
+
+#reviews {
+    width: 100%;
+    min-height: 874px;
+    background-color: #F7F8FA;
+    padding: 100px 0;
+}
+
+#reviews .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#reviews .text {
+    text-align: center;
+    color: black;
+}
+
+#reviews .window-blok {
+    background-color: white;
+    width: 350px;
+    max-width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 40px 32px;
+}
+
+
+#reviews .review {
+    display: flex;
+    justify-content: center;
+    border-radius: 16px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.window {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+.window-blok img {
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 32px;
+}
+
+.text h1 {
+    margin-bottom: 24px;
+    font-size: 64px;
+}
+
+#reviews .text p {
+    font-size: 24px;
+    margin-bottom: 80px;
+    color: black;
+    opacity: 70%;
+}
+
+.window .window-blok .review p {
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.window .window-blok .review h4 {
+    font-size: 18px;
+    margin-bottom: 0;
+    font-family: 'Stem-Medium';
+}
+
+.window .window-blok .review h6 {
+    font-size: 13px;
+    color: black;
+    opacity: 40%;
+    font-family: 'Stem-Regular';
+    font-weight: 400px;
+}
+
+/*Контакты*/
+
+#contact {
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    padding: 0;
+    display: flex;
+    gap: 125px;
+}
+#contact .map {
+    width: 50%;
+}
+#contact .map iframe{
+    width: 100%;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    padding: 82px 0;
+
+}
+
+.contacts-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.contact-items  {
+    font-size: 18px;
+    font-family: 'Stem-Medium', sans-serif;
+}
+
+.contact-items .email {
+    color: #FF5545;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: flex;
+    margin-top: 32px;
+    align-items: center;
+}
+
+.black {
+    color: black;
+    opacity: 70%;
+}
+  
+
+.button .primaryy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px; 
+    font-family: 'Stem-Medium';
+    width: auto;
+    height: 44px;
+    padding: 16px 32px; 
+    gap: 10px;
+    border-radius: 6px; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color .3s, color .3s, transform .3s, box-shadow .3s;
+}
+
+
+.button .primaryy {
+    background-color: #00E676;
+    color: white;
+}
+
+.button .primaryy:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.contact-items .button img{
+    width: 24px;
+    height: 24px;
+}
+
+.button img {
+    background-color: #00E676;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.button .primaryy h5 {
+    font-size: 15px;
+}
+
+/*Футер*/
+
+#footer {
+    width: 100%;
+    background-color: #F7F8FA;
+    padding: 40px 0;   
+}
+
+#footer .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+#footer .text{
+    display: flex;
+    gap: 16px;
+}
+
+#footer .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+#footer .text {
+    display: flex;
+    color: black;
+    gap: 40px;
+    flex-direction: row;
+    justify-content: center;
+   
+
+}
+
+#footer .text h3 {
+    font-size: 18px; 
+    font-family: 'Stem-Regular';
+    font-weight: 400px;
+    margin-bottom: 40px;
+    color: black;
+    opacity: 60%;
+}
+
+
+#footer .end {
+    display: flex;
+    justify-content: center;
+}
+
+#footer .end h4 {
+    font-size: 15px;
+    color: black;
+    opacity: 40%;
+    font-family: 'Stem-Regular';
+    font-weight: 400px;
+}
+
+
+
+@media (max-width: 1247px) {
+     #diplomi .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    #work .container {
+        align-items: center;
+    }
+
+
+    #work .work-step:nth-child(1) {
+        flex-direction: row-reverse;
+    }
+
+    #work .work-step .text-2 {
+        text-align: right;
+    }
+
+    #work .work-step:nth-child(3) {
+        flex-direction: row-reverse;
+        align-self: auto;
+    }
+
+}
+
+/* Мобильная адаптация */
+@media (max-width: 1034px) {
+    header .primary {
+        display: none;
+    }
+    
+    .phone-block {
+        display: none;
+    }
+
+    #diplomi .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    #connect .text-box {
+        margin: 15px;
+    }
+
+    .window {
+        margin: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        /* position: relative;  */
+    }
+    
+    header .wrapper {
+        /* position: fixed; */
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 0;
+        transform: translateX(-100%);
+        z-index: 998;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+    
+    header .wrapper.active {
+        transform: translateX(0);
+    }
+    
+    header nav ul {
+        left: 0;
+        top: 0;
+        height: 100%;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        display: flex;
+    }
+    
+    header nav a {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 18px;
+        display: block; 
+        text-align: center;
+    }
+    
+    header nav a::after {
+        display: none;
+    }
+    
+    .burger {
+        display: flex;
+        z-index: 999;
+    }
+    
+    .burger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .burger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    body.menu-open {
+        position: fixed; 
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #connect .text-box1,
+    #free_konsult .buttons {
+        flex-direction: column;
+        align-items: center;
+        /* width: 100%; */
+    }
+
+    #connect .input-field,
+    #free_konsult .input-field,
+    #connect .primary-1,
+    #free_konsult .primary {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 15px;
+    }
+
+    #connect .text p,
+    #free_konsult .text p {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    #reviews .window {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #reviews .window-blok {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 809px) {
+
+    h1 {
+        font-size: 36px !important;
+        line-height: 1.2;
+    }
+    
+    h2 {
+        font-size: 24px !important;
+    }
+    
+    p {
+        font-size: 16px !important;
+    }
+
+
+    #work {
+        gap: 47px;
+    }
+
+    #work .container {
+        align-items: center;
+    }
+
+
+    #work .work-step:nth-child(1) {
+        flex-direction: row-reverse;
+    }
+
+    #work .work-step .text-2 {
+        text-align: right;
+    }
+
+    #work .work-step:nth-child(3) {
+        flex-direction: row-reverse;
+    }
+
+    #reviews .window {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 560px) {
+    #work .work-step .text-1 h1 {
+        font-size: 18px;
+    }
+
+    #work .work-step .text-1 p{
+        font-size: 15px;
+    }
+}
+
+
+
+
+@media (max-width: 576px) {
+    header {
+        height: 70px;
+    }
+    
+    header .wrapper {
+        top: 70px;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo {
+        width: 120px;
+    }
+
+    #diplomi .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .primary, .primary-1, .primary-2 {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .input-field {
+        height: 48px;
+        font-size: 16px;
+    }
+
+    #practica .text {
+        gap: 50px;
+    }
+
+    #work .work-step h2 {
+        font-size: 16px !important; 
+        margin-bottom: 8px !important;
+    }
+    
+    #work .work-step p {
+        font-size: 12px !important; 
+    }
+
+    #free_konsult {
+        padding: 150px 0;
+    }
+
+    #reviews .window {
+        grid-template-columns: 1fr;
+    }
+
+    #reviews .window-blok {
+        padding: 30px 20px;
+    }
+
+    #reviews .review p {
+        font-size: 18px;
+    }
+
+    #contact {
+        display: flex;
+        gap: 30px;
+    }
+
+    #connect .text h1,
+    #free_konsult .text h1,
+    #reviews .text h1 {
+        font-size: 32px;
+        padding: 0 15px;
+    }
+
+    #connect .text-box1 {
+            width: 100%;
+            padding: 0 20px; 
+    }
+    
+    #connect .input-field,
+    #connect .primary-1 {
+         width: 100%;
+         max-width: 100%; 
+         margin-left: 0;
+        margin-right: 0;
+    }
+    
+    #connect .text-box {
+        padding: 0 20px; 
+    }
+    
+     #connect .text h1 {
+        font-size: 32px;
+        padding: 0 15px;
+        text-align: center;
+    }
+    
+    #connect .text p {
+        padding: 0 20px;
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    #connect .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    #connect .input-field {
+        margin-bottom: 15px;
+    }
+
+    #work {
+        gap: 47px;
+    }
+
+    #work .container {
+        align-items: center;
+    }
+
+    #work .work-step:nth-child(3) {
+       align-self: auto;
+    }
+
+
+    #work .work-step:nth-child(1) {
+        flex-direction: row-reverse;
+    }
+
+    #work .work-step .text-2 {
+        text-align: right;
+    }
+
+    #work .work-step:nth-child(3) {
+        flex-direction: row-reverse;
+    }
+
+
+    #free_konsult .numbers {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #free_konsult .numbers-1 {
+        width: 45%;
+        margin-bottom: 15
+    }
+
+
+    #klients .container {
+        padding: 0px 60px;
+    }
+
+    #klients .swiper-button-next img {
+        width: 165px;
+        height: 95px;
+    }
+
+
+    #klients .swiper-button-prev img{
+        width: 165px;
+        height: 95px;
+    }
+
+    .button .primaryy {
+        padding: 10px 20px; 
+        height: 40px; 
+        font-size: 15px; 
+    }
+    
+    .button img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .button .primaryy h5 {
+        font-size: 14px; 
+    }
+
+
+    #footer {
+        padding: 40px 15px;
+    }
+
+
+    #footer .text h3 {
+        font-size: 15px;
+    }
+
+    #footer .end h4 {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 380px) {
+    #work .work-step .text-1 {
+        margin-left: -10px;
+    }
+}
+
+   
